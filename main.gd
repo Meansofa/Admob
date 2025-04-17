@@ -5,7 +5,7 @@ extends Node2D
 var is_initialized := false
 
 func _ready() -> void:
-	print("MEOW")
+	
 	admob.initialize()
 
 func _on_admob_initialization_completed(status_data: InitializationStatus) -> void:

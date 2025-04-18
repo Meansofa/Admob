@@ -1,80 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjpso0qbypbog"]
+[gd_scene load_steps=3 format=3 uid="uid://cl73xbvglm2cg"]
 
-[ext_resource type="Script" uid="uid://dbxmovvy03nib" path="res://main.gd" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://c4ir14xivpggb" path="res://addons/AdmobPlugin/Admob.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://ssq510j3cpup" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bb1iupvhjyg0b" path="res://addons/AdmobPlugin/Admob.gd" id="2_h2yge"]
 
-[node name="Main" type="Node2D" node_paths=PackedStringArray("admob")]
+[node name="Main" type="Node2D"]
 script = ExtResource("1_0xm2m")
-admob = NodePath("Admob")
 
 [node name="Admob" type="Node" parent="."]
 script = ExtResource("2_h2yge")
 debug_application_id = "ca-app-pub-3940256099942544~3347511713"
-debug_banner_id = "ca-app-pub-3940256099942544/6300978111"
+debug_banner_id = "ca-app-pub-3940256099942544/9214589741"
 debug_interstitial_id = "ca-app-pub-3940256099942544/1033173712"
-debug_rewarded_id = "ca-app-pub-3940256099942544/5224354917"
+debug_rewarded_id = "ca-app-pub-5371806359960064/7348036198"
 debug_rewarded_interstitial_id = "ca-app-pub-3940256099942544/5354046379"
-metadata/_custom_type_script = "uid://c4ir14xivpggb"
+real_application_id = "ca-app-pub-5371806359960064~1048375243"
+real_banner_id = "ca-app-pub-5371806359960064/2929676394"
+real_interstitial_id = "ca-app-pub-5371806359960064/7132413771"
+real_rewarded_id = "ca-app-pub-5371806359960064/7348036198"
+real_rewarded_interstitial_id = "ca-app-pub-5371806359960064/7348036198"
+metadata/_custom_type_script = "uid://bb1iupvhjyg0b"
 
 [node name="Banner" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 56.0
-offset_top = 210.0
-offset_right = 121.0
-offset_bottom = 241.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Banner
-"
+offset_left = 89.0
+offset_top = 251.0
+offset_right = 154.0
+offset_bottom = 282.0
+text = "Banner"
 
 [node name="Interstitial" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 215.0
-offset_top = 317.0
-offset_right = 304.0
-offset_bottom = 348.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 201.0
+offset_top = 308.0
+offset_right = 290.0
+offset_bottom = 339.0
 text = "Interstitial"
 
 [node name="Reward" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 398.0
-offset_top = 214.0
-offset_right = 465.0
-offset_bottom = 245.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Reward
-"
-
-[node name="Control" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 720.0
-offset_bottom = 1280.0
-
-[node name="PanelContainer" type="PanelContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
+offset_left = 127.0
+offset_top = 156.0
+offset_right = 194.0
+offset_bottom = 187.0
+text = "Reward"
 
 [connection signal="initialization_completed" from="Admob" to="." method="_on_admob_initialization_completed"]
 [connection signal="pressed" from="Banner" to="." method="_on_banner_pressed"]
